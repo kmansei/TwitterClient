@@ -18,7 +18,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'settingslogic'
+gem 'twitter'
 gem 'dotenv-rails'
+gem 'bootstrap-sass'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
