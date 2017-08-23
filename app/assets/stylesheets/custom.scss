@@ -1,3 +1,24 @@
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "honoka";
 
+/*timeline関連*/
+.post_panel {
+  padding: 5px 5px 5px 5px;
+}
+.post {
+  padding-left: 55px;
+}
+.profile_image{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: left;
+  img {
+    border-radius: 100%;
+  }
+}
+.post_image{
+  img {
+    max-height: 250px;
+    max-width: 300px;
+  }
+}

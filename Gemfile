@@ -20,8 +20,8 @@ gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'twitter'
 gem 'dotenv-rails'
-gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
+gem 'honoka-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
