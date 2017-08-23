@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     session[:name] = auth['info']['name']
     session[:oauth_token] = auth['credentials']['token']
     session[:oauth_token_secret] = auth['credentials']['secret']
-    redirect_to "/tweet"
+    redirect_to home_path
   end
 
   def destroy
