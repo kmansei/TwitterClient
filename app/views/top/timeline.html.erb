@@ -1,10 +1,11 @@
-<div class="col-xs-4">
+<div class="col-xs-4 sidebar container">
+  <%= image_tag(@profile_banner, class: "img-responsive sidebar") if @profile_banner %>
   <%= form_tag(tweet_path, method: "post") do %>
     <%= text_field_tag :text %>
     <%= submit_tag("Tweet", class: "btn btn-primary") %>
   <% end %>
 </div>
-<div class="col-xs-8 col-xs-offset-4">
+<div class="col-xs-8">
   <% @tweets.each do |tweet| %>
     <div class="post_panel well well-sm">
       <div class="profile_image">

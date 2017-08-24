@@ -23,6 +23,11 @@ class TopController < ApplicationController
     end
 
     @tweets = client.home_timeline(include_entities: true)
+    begin
+      @profile_banner = client.profile_banner.attrs[:sizes][:web][:url]
+    rescue
+      @profile_banner = false
+    end
   end
 
 end
