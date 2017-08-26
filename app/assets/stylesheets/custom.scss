@@ -2,35 +2,43 @@
 @import "honoka";
 
 /*timeline*/
-.post_panel {
+.post-panel {
   padding: 5px 5px 5px 5px;
+  margin-bottom: 0px;
 }
 .post {
-  padding-left: 55px;
+  padding-left: 65px;
 }
-.profile_image{
+.tweet-image{
   margin-top: 5px;
   margin-bottom: 5px;
   float: left;
   img {
-    border-radius: 100%;
+    border-radius: 50%;
+    border: 5px solid #fff;
   }
 }
-.post_image{
+.post-image{
   img {
     max-height: 250px;
     max-width: 300px;
   }
 }
 
-.login_section{
+.login-section{
   float: right;
   margin-right: 15px;
 }
 
 /*sidebar*/
 .sidebar {
-  img {
-    margin-top: 25px;
-  }
+  margin-top: 25px;
+  position: fixed;
+}
+.profile-image {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 100px;
+  height: 100px;
+  margin: -40px 0px 0px 10px;
 }

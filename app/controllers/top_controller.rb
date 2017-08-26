@@ -22,12 +22,8 @@ class TopController < ApplicationController
       config.access_token_secret = session[:oauth_token_secret]
     end
 
+    @user = client.user
     @tweets = client.home_timeline(include_entities: true)
-    begin
-      @profile_banner = client.profile_banner.attrs[:sizes][:web][:url]
-    rescue
-      @profile_banner = false
-    end
   end
 
 end
