@@ -7,7 +7,7 @@ end
 
 
 gem 'rails', '~> 5.0.5'
-gem 'sqlite3'
+gem 'mysql2'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -19,7 +19,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'twitter'
-gem 'dotenv-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'bootstrap-will_paginate'
 gem 'honoka-rails'
 

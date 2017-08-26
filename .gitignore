@@ -22,4 +22,3 @@
 
 # Ignore environmental variable
 /.env
-config/settings.yml
