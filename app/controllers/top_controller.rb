@@ -1,5 +1,5 @@
 class TopController < ApplicationController
-  before_action :login_required, only: [:timeline]
+  before_action :login_required, only: [:timeline, :tweet]
   require 'twitter'
 
   def tweet
