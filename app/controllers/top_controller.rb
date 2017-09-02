@@ -1,27 +1,16 @@
 class TopController < ApplicationController
   before_action :login_required, only: [:timeline, :tweet]
+  include Common
   require 'twitter'
 
   def tweet
-    client = Twitter::REST::Client.new do |config|
-      config.consumer_key         = Settings.twitter.consumer_key
-      config.consumer_secret      = Settings.twitter.consumer_secret
-      config.access_token         = session[:oauth_token]
-      config.access_token_secret  = session[:oauth_token_secret]
-    end
-
+    client = client_new
     client.update(params[:text])
     redirect_to home_path
   end
 
   def timeline
-    client = Twitter::REST::Client.new do |config|
-      config.consumer_key = Settings.twitter.consumer_key
-      config.consumer_secret = Settings.twitter.consumer_secret
-      config.access_token = session[:oauth_token]
-      config.access_token_secret = session[:oauth_token_secret]
-    end
-
+    client = client_new
     @user = client.user
     @tweets = client.home_timeline(include_entities: true)
   end
